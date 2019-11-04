@@ -29,7 +29,7 @@ change directory
 cd SB_neoantigen_Models/
 ```
 
-Alter paths you can open and use your favorite text editor or
+Alter paths. You can open src/functions4models.py and use your favorite text editor or run the commands below.
 
 ```
 sed -i  "s#/netMHCpan-4.0/netMHCpan#/path/to/your/netMHCpan-4.0/netMHCpan#" src/functions4model.py
