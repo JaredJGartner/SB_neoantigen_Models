@@ -22,14 +22,17 @@ from sklearn.utils.class_weight import compute_sample_weight
 from sklearn.calibration import CalibratedClassifierCV
 
 base_path = Path(__file__).parent
-
-##LOCATIONS OF NETMHC,NETCHOP, NETSTAB
+###########################################################################
+##ADJUST TOP LOCATIONS ON YOUR SYSTEM
+##LOCATIONS OF NETMHC,NETCHOP, NETSTAB 
 netmhcpan = '/data/CCRSB/apps/netMHCpan/netMHCpan-4.0/netMHCpan'
-mhcI = (str(base_path)+'/mhc/MHC_list.txt')
 ##path to netCHOP-3.1
 netchop = '/data/CCRSB/apps/netCHOP/netchop-3.1/bin/netChop'
 ##path to netStab
 netstab = '/data/CCRSB/apps/netMHCstabpan/netMHCstabpan-1.0/netMHCstabpan'
+############################################################################
+
+mhcI = (str(base_path)+'/mhc/MHC_list.txt')
 
 def create_Fastas(df,name, loc = None):
     '''Takes df as input that contains the columns 'Mut nmer' & 'Wt nmer'
