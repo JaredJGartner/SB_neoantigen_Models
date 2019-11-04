@@ -46,13 +46,13 @@ Example input file is provided in examples so that you can test that everything 
 ### The script takes as input 
 
 1) An excel sheet with the following header:
-    Unique identifier,Wt nmer,Mut nmer,Exome VAF decile,Gene expression decile,Present in RNA-seq data\n    
-    a) Unique identifier = a unique ID to link all data back to\n
-    b) Wt nmer = Wild type amino acid sequence\n
-    c) Mut nmer = Mutant aminoc acid sequence\n
-    d) Exome VAF decile = The variant allele frequency for all mutations broken into decile for more information see "Development of a model for ranking candidate HLA class I neoantigens based upon datasets of known neoepitopes" Gartner et al.\n
-    e) Gene expression decile = The expression of the gene binned into deciles as based upon al genes expression for that sample.\n
-    f) Present in RNA-seq data = 1 or 0  for whether mutation was found in RNA sequencing data 1 = yes, 0 = no.\n
+    Unique identifier,Wt nmer,Mut nmer,Exome VAF decile,Gene expression decile,Present in RNA-seq data  
+a) Unique identifier = a unique ID to link all data back to
+b) Wt nmer = Wild type amino acid sequence
+c) Mut nmer = Mutant aminoc acid sequence
+d) Exome VAF decile = The variant allele frequency for all mutations broken into decile for more information see "Development of a model for ranking candidate HLA class I neoantigens based upon datasets of known neoepitopes" Gartner et al.
+e) Gene expression decile = The expression of the gene binned into deciles as based upon al genes expression for that sample.
+f) Present in RNA-seq data = 1 or 0  for whether mutation was found in RNA sequencing data 1 = yes, 0 = no.
 
 2) a list of up to 6 Class I HLAs formatted to match netMHC input for example HLA-A01:01
 
