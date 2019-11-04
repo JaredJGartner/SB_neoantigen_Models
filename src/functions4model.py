@@ -25,11 +25,11 @@ base_path = Path(__file__).parent
 ###########################################################################
 ##ADJUST TOP LOCATIONS ON YOUR SYSTEM
 ##LOCATIONS OF NETMHC,NETCHOP, NETSTAB 
-netmhcpan = '/data/CCRSB/apps/netMHCpan/netMHCpan-4.0/netMHCpan'
+netmhcpan = '/Your/System/Path/netMHCpan/netMHCpan-4.0/netMHCpan'
 ##path to netCHOP-3.1
-netchop = '/data/CCRSB/apps/netCHOP/netchop-3.1/bin/netChop'
+netchop = '/Your/System/Path/netCHOP/netchop-3.1/bin/netChop'
 ##path to netStab
-netstab = '/data/CCRSB/apps/netMHCstabpan/netMHCstabpan-1.0/netMHCstabpan'
+netstab = '/Your/System/Path/netMHCstabpan/netMHCstabpan-1.0/netMHCstabpan'
 ############################################################################
 
 mhcI = (str(base_path)+'/mhc/MHC_list.txt')
