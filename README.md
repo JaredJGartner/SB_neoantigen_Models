@@ -58,7 +58,7 @@ Test to see outputs are the same as those given in examples
 mkdir test
 cp examples/example_input.xlsx test/
 cd test
-../src/ScoreEpitopes.py example_input.xlsx  HLA-A01:01 HLA-A02:01 HLA-B11:01 HLA-B08:01 HLA-C02:01 HLA-C08:01
+python ../src/ScoreEpitopes.py example_input.xlsx  HLA-A01:01 HLA-A02:01 HLA-B11:01 HLA-B08:01 HLA-C02:01 HLA-C08:01
 
 ```
 
