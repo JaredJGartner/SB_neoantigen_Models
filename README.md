@@ -10,7 +10,7 @@ This code is written to run with python version 3.6 and requires NetMHCpan-4.0,N
 ```
 NetMHCpan-4.0 (http://www.cbs.dtu.dk/services/NetMHCpan/)
 NetChop 3.1 (http://www.cbs.dtu.dk/services/NetChop/)
-NetMHCStab 1.0 (http://www.cbs.dtu.dk/services/NetMHCstab/)
+NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
 ```
 
 ### Installing
