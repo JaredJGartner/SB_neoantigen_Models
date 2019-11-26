@@ -18,7 +18,7 @@ NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
 
 ### Installing
 
-After cloning repository on system alter NetMHCpan-4.0,NetChop 3.1 and NetMHCStab paths in src/functions4model.py to their locations on your system. 
+After cloning repository on system alter NetMHCpan-4.0,NetChop 3.1 and NetMHCStab paths in src/functions4model.py to their locations on your system. For a step by step example of setting up prerequisites and testing see instructions in examples directory.
 
 Clone repository
 
