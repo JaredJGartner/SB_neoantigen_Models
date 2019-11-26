@@ -1,0 +1,75 @@
+##Create a directory for install
+    mkdir neoantigen_git
+    cd neoantigen_git
+
+##clone
+    git clone https://github.com/JaredJGartner/SB_neoantigen_Models.git
+
+##mk dependency directories
+    mkdir netMHCStabpan1.0
+    mkdir NetMHCpan2.8
+    mkdir NetMHCpan4.0
+    mkdir NetChop3.1
+    mkdir tmp
+
+##move downloads to proper directories
+
+    mv /Users/gartnerjj/Downloads/netMHCstabpan-1.0a.Darwin.tar.gz NetMHCStabpan1.0/
+    mv /Users/gartnerjj/Downloads/netMHCpan-4.0a.Darwin.tar.gz NetMHCpan4.0/
+    mv /Users/gartnerjj/Downloads/netchop-3.1d.Darwin.tar.gz NetChop3.1/
+    mv /Users/gartnerjj/Downloads/netMHCpan-2.8a.Darwin.tar.gz NetMHCpan2.8/
+
+##complete dependency installs
+
+    #netmhcpan2.8
+        cd NetMHCpan2.8
+        tar xvfz netMHCpan-2.8a.Darwin.tar.gz
+        cd netMHCpan-2.8
+        wget http://www.cbs.dtu.dk/services/NetMHCpan-2.8/data.tar.gz
+        tar xvfz data.tar.gz
+        #edit netMHCpan script as shown in readme example below
+        #setenv	NMHOME	/Users/gartnerjj/Desktop/neoantigen_git/NetMHCpan2.8/netMHCpan-2.8
+        #setenv  TMPDIR  /Users/gartnerjj/Desktop/neoantigen_git/tmp
+
+    #netmhcstabpan
+        cd netMHCStabpan1.0
+        tar xvfz netMHCstabpan-1.0a.Darwin.tar.gz 
+        cd netMHCstabpan-1.0
+        wget http://www.cbs.dtu.dk/services/NetMHCstabpan-1.0/data.tar.gz
+        tar xvfz data.tar.gz
+        #edit the script netMHCstabpan as in the readme 3 line change example below
+        #setenv	NMHOME	/Users/gartnerjj/Desktop/neoantigen_git/NetMHCStabpan1.0/netMHCstabpan-1.0
+        #set	NetMHCpan = /Users/gartnerjj/Desktop/neoantigen_git/NetMHCpan2.8/netMHCpan-2.8/netMHCpan
+        #setenv  TMPDIR  /Users/gartnerjj/Desktop/neoantigen_git/tmp
+
+    #netmhcpan4.0
+        cd NetMHCpan4.0
+        tar xvfz netMHCpan-4.0a.Darwin.tar.gz
+        cd netMHCpan-4.0
+        wget http://www.cbs.dtu.dk/services/NetMHCpan-4.0/data.Darwin.tar.gz
+        tar xvfz data.Darwin.tar.gz
+        #edit netMHCpan script as shown in readme example below
+        #setenv	NMHOME	/Users/gartnerjj/Desktop/neoantigen_git/NetMHCpan4.0/netMHCpan-4.0
+        #setenv  TMPDIR  /Users/gartnerjj/Desktop/neoantigen_git/tmp
+
+    #netchop
+        cd NetChop3.1
+        tar xvfz netchop-3.1d.Darwin.tar.gz
+        cd netchop-3.1
+        #edit netchop as shown in read me example below
+        #setenv  NMHOME  /Users/gartnerjj/Desktop/neoantigen_git/NetChop3.1/netchop-3.1
+        #setenv  TMPDIR  /Users/gartnerjj/Desktop/neoantigen_git/tmp
+
+##unzip model and Edit functions4models.py in 
+    cd SB_neoantigen_Models/src/models/
+    gunzip MmpModel.pickle.gz
+    #Used text editor to change the paths to locations of netmhcpan4.0, netchop, and netmhcstabpan 
+    #netmhcpan = '/Users/gartnerjj/Desktop/neoantigen_git/NetMHCpan4.0/netMHCpan-4.0/netMHCpan'
+    #netchop = '/Users/gartnerjj/Desktop/neoantigen_git/NetChop3.1/netchop-3.1/netchop'
+    #netstab = '/Users/gartnerjj/Desktop/neoantigen_git/NetMHCStabpan1.0/netMHCstabpan-1.0/netMHCstabpan'
+
+##Test neoantigen model
+    /Users/gartnerjj/Desktop/neoantigen_git/SB_neoantigen_Models/
+    mkdir test
+    cp examples/example_input.xlsx test/
+    cd test
