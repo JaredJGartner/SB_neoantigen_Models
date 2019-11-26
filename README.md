@@ -26,13 +26,14 @@ Clone repository
 git clone https://github.com/JaredJGartner/SB_neoantigen_Models.git
 ```
 
-change directory
+change directory and unzip MmpModel
 
 ```
-cd SB_neoantigen_Models/
+cd SB_neoantigen_Models/src/models/
+gunzip MmpModel.pickle.gz
 ```
 
-Alter paths. You can open src/functions4models.py and use your favorite text editor.
+Alter paths in SB_neoantigen_Models/src/functions4models.py and use your favorite text editor.
 
 ```
 Using your favorite text editor edit the paths to netmhcpan4.0, netmhcstabpan, netChop to their location on your system and save changes.
@@ -56,6 +57,7 @@ Unique identifier = a unique ID to link all data back to; Wt nmer = Wild type am
 Test to see outputs are the same as those given in examples
 
 ```
+##starting from SB_neoantigen_Models
 mkdir test
 cp examples/example_input.xlsx test/
 cd test
