@@ -9,8 +9,11 @@ This code is written to run with python version 3.6 and requires NetMHCpan-4.0,N
 
 ```
 NetMHCpan-4.0 (http://www.cbs.dtu.dk/services/NetMHCpan/)
+NetMHCpan-2.8 (http://www.cbs.dtu.dk/services/NetMHCpan/)
 NetChop 3.1 (http://www.cbs.dtu.dk/services/NetChop/)
 NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
+**gawk is required
+
 ```
 
 ### Installing
@@ -29,12 +32,10 @@ change directory
 cd SB_neoantigen_Models/
 ```
 
-Alter paths. You can open src/functions4models.py and use your favorite text editor or run the commands below.
+Alter paths. You can open src/functions4models.py and use your favorite text editor.
 
 ```
-sed -i  "s#/netMHCpan-4.0/netMHCpan#/path/to/your/netMHCpan-4.0/netMHCpan#" src/functions4model.py
-sed -i  "s#/netchop-3.1/bin/netChop#/path/to/your/netchop-3.1/bin/netChop#" src/functions4model.py
-sed -i  "s#/netMHCstabpan-1.0/netMHCstabpan#/path/to/your/netMHCstabpan-1.0/netMHCstabpan#" src/functions4model.py
+Using your favorite text editor edit the paths to netmhcpan4.0, netmhcstabpan, netChop to their location on your system and save changes.
 
 ```
 
