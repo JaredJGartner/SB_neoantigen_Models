@@ -58,7 +58,7 @@ Unique identifier = a unique ID to link all data back to; Wt nmer = Wild type am
 
 2) a list of up to 6 Class I HLAs formatted to match netMHC input for example HLA-A01:01
  
-*3) optionally you can provide the flag --cpus and increase the number of cpus this will speed up the neMHCstab prediction portion by spreading the commands across cpus
+3) *optionally you can provide the flag --cpus and increase the number of cpus this will speed up the neMHCstab prediction portion by spreading the commands across cpus
 
 Test to see outputs are the same as those given in examples
 
