@@ -69,6 +69,7 @@ ensure that conda environment is Active. directions to create environment are in
 ```
 conda activate mhcflurry-env
 ```
+```
 mkdir test
 cd test
 python ../src/GenerateScores.py ../examples/nmer_test_input.xlsx HLA-A02:01 HLA-A03:01 HLA-B13:02 HLA-B15:01 HLA-C05:01 HLA-C06:02
