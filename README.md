@@ -18,8 +18,8 @@ NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
 
 ### Installing
 
-After cloning repository on system please read instructions full step by step description of setting up model is found in instructions.txt. 
-IEDB mmunogenicity needs to be converted to python 3 instructions for doing so are in this file. 
+After cloning repository on system please read instructions full step by step description of set up found in instructions.txt. 
+IEDB mmunogenicity needs to be converted to python 3. Instructions for doing so are in this file. 
 After everything is installed alter IEDB immunogenicity and  NetMHCStab paths in src/prediction_modules.py to their locations on your system.
 
 
@@ -29,7 +29,7 @@ Clone repository
 git clone https://github.com/JaredJGartner/SB_neoantigen_Models.git
 ```
 
-change directory and unzip MmpModel
+change directory and unzip models
 
 ```
 cd SB_neoantigen_Models/src/models/
