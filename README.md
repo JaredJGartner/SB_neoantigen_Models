@@ -1,24 +1,27 @@
 # SB Neoantigen scores
 
-This i repository contains a python script for scoring mmps and nmers for their likelihood of recognition against a list of Class I alleles based upon the methods described in  
+This repository contains a python script for scoring mmps and nmers for their likelihood of recognition against a list of Class I alleles based upon the methods described in  
 "Development of a model for ranking candidate HLA class I neoantigens based upon datasets of known neoepitopes" Gartner et al.
 
 ### Prerequisites
 
-This code is written to run with python version 3.6 and requires NetMHCpan-4.0,NetChop3.1 and netMHCStab 1.0.  Links are provided below please accept user license and install on your system
+This code is written to run with python version 3.6 and requires IEDB Immunogenicity tool, MHCflurry1.6 and netMHCStab 1.0.  
+Links are provided below please accept user license and install on your system.
+a conda environment .yml is distributed to create python environment mhcflurry-env to run model 
 
 ```
-NetMHCpan-4.0 (http://www.cbs.dtu.dk/services/NetMHCpan/)
-NetMHCpan-2.8 (http://www.cbs.dtu.dk/services/NetMHCpan/)
-NetChop 3.1 (http://www.cbs.dtu.dk/services/NetChop/)
+IEDB immunogenicity prediction Tool (http://tools.iedb.org/immunogenicity/download/)
 NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
-**gawk is required
+
 
 ```
 
 ### Installing
 
-After cloning repository on system alter NetMHCpan-4.0,NetChop 3.1 and NetMHCStab paths in src/functions4model.py to their locations on your system. For a step by step example of setting up prerequisites and testing see instructions in examples directory.
+After cloning repository on system please read instructions full step by step description of setting up model is found in instructions.txt. 
+IEDB mmunogenicity needs to be converted to python 3 instructions for doing so are in this file. 
+After everything is installed alter IEDB immunogenicity and  NetMHCStab paths in src/prediction_modules.py to their locations on your system.
+
 
 Clone repository
 
@@ -30,13 +33,15 @@ change directory and unzip MmpModel
 
 ```
 cd SB_neoantigen_Models/src/models/
-gunzip MmpModel.pickle.gz
+gunzip mmp_Model.pickle.gz
+gunzip nmer_Model.pickle.gz
 ```
 
-Alter paths in SB_neoantigen_Models/src/functions4models.py and use your favorite text editor.
+## Alter paths in SB_neoantigen_Models/src/functions4models.py and use your favorite text editor.
 
 ```
-Using your favorite text editor edit the paths to netmhcpan4.0, netmhcstabpan, netChop to their location on your system and save changes.
+Using your favorite text editor edit the paths to IEDB imuunogenicity, netmhcstabpan to their location on your system and save changes.
+A full step by step description of setting model is found in instructions.txt
 
 ```
 
@@ -52,20 +57,24 @@ Example input file is provided in examples so that you can test that everything 
 Unique identifier = a unique ID to link all data back to; Wt nmer = Wild type amino acid sequence; Mut nmer = Mutant amino acid sequence; Exome VAF decile = The variant allele frequency for all mutations broken into decile for more information see "Development of a model for ranking candidate HLA class I neoantigens based upon datasets of known neoepitopes" Gartner et al.; Gene expression decile = The expression of the gene binned into deciles as based upon al genes expression for that sample; Present in RNA-seq data = 1 or 0  for whether mutation was found in RNA sequencing data 1 = yes, 0 = no.
 
 2) a list of up to 6 Class I HLAs formatted to match netMHC input for example HLA-A01:01
-
+ 
+*3) optionally you can provide the flag --cpus and increase the number of cpus this will speed up the neMHCstab prediction portion by spreading the commands across cpus
 
 Test to see outputs are the same as those given in examples
 
+
+## Starting from SB_neoantigen_Models 
+
+ensure that conda environment is Active. directions to create environment are in instructions.txt
 ```
-##starting from SB_neoantigen_Models
+conda activate mhcflurry-env
+```
 mkdir test
-cp examples/example_input.xlsx test/
 cd test
-python ../src/ScoreEpitopes.py example_input.xlsx HLA-A02:01 HLA-A11:01 HLA-B08:01 HLA-B35:03 HLA-C08:02 HLA-C12:03
-
+python ../src/GenerateScores.py ../examples/nmer_test_input.xlsx HLA-A02:01 HLA-A03:01 HLA-B13:02 HLA-B15:01 HLA-C05:01 HLA-C06:02
 ```
 
-This will produce 2 out files in this test directory same as seen in examples directory
+This will produce a single output excel files in this test directory same as seen in examples directory
 
 ## License
 
