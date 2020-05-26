@@ -65,10 +65,11 @@ Test to see outputs are the same as those given in examples
 
 ## Starting from SB_neoantigen_Models 
 
-ensure that conda environment is Active. directions to create environment are in instructions.txt
+Ensure that conda environment is Active. directions to create environment are in instructions.txt
 ```
 conda activate mhcflurry-env
 ```
+Test model
 ```
 mkdir test
 cd test
