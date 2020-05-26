@@ -5,21 +5,21 @@ This repository contains a python script for scoring mmps and nmers for their li
 
 ### Prerequisites
 
-This code is written to run with python version 3.6 and requires IEDB Immunogenicity tool, MHCflurry1.6 and netMHCStab 1.0.  
+This code is written to run with python version 3.6 and requires IEDB Immunogenicity tool, MHCflurry1.6, netMHCpan-2.8 and netMHCStabpan1.0.  
 Links are provided below please accept user license and install on your system.
 a conda environment .yml is distributed to create python environment mhcflurry-env to run model 
 
 ```
 IEDB immunogenicity prediction Tool (http://tools.iedb.org/immunogenicity/download/)
 NetMHCStabpan 1.0 (http://www.cbs.dtu.dk/services/NetMHCstabpan/)
-
+NetMHCpan-2.8 (http://www.cbs.dtu.dk/services/NetMHCpan/)
 
 ```
 
 ### Installing
 
-After cloning repository on system please read instructions full step by step description of set up found in instructions.txt. 
-IEDB mmunogenicity needs to be converted to python 3. Instructions for doing so are in this file. 
+After cloning repository on system please read instructions full step by step description of setting up model is found in instructions.txt. 
+IEDB mmunogenicity needs to be converted to python 3 instructions for doing so are in this file. 
 After everything is installed alter IEDB immunogenicity and  NetMHCStab paths in src/prediction_modules.py to their locations on your system.
 
 
@@ -29,7 +29,7 @@ Clone repository
 git clone https://github.com/JaredJGartner/SB_neoantigen_Models.git
 ```
 
-change directory and unzip models
+change directory and unzip MmpModel
 
 ```
 cd SB_neoantigen_Models/src/models/
@@ -58,18 +58,16 @@ Unique identifier = a unique ID to link all data back to; Wt nmer = Wild type am
 
 2) a list of up to 6 Class I HLAs formatted to match netMHC input for example HLA-A01:01
  
-3) *optionally you can provide the flag --cpus and increase the number of cpus this will speed up the neMHCstab prediction portion by spreading the commands across cpus
+*3) optionally you can provide the flag --cpus and increase the number of cpus this will speed up the neMHCstab prediction portion by spreading the commands across cpus
 
 Test to see outputs are the same as those given in examples
 
 
 ## Starting from SB_neoantigen_Models 
 
-Ensure that conda environment is Active. directions to create environment are in instructions.txt
+ensure that conda environment is Active. directions to create environment are in instructions.txt
 ```
 conda activate mhcflurry-env
-```
-Test model
 ```
 mkdir test
 cd test
