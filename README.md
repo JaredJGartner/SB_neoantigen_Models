@@ -5,9 +5,9 @@ This repository contains a python script for scoring mmps and nmers for their li
 
 ### Prerequisites
 
-This code is written to run with python version 3.6 and requires IEDB Immunogenicity tool, MHCflurry1.6, netMHCpan-2.8 and netMHCStabpan1.0.  
-Links are provided below please accept user license and install on your system.
-two conda environment .yml's are distributed to create python environment mhcflurry-env to run model. 
+This code is written to run with python version 3.6 and requires IEDB Immunogenicity tool, MHCflurry1.6, netMHCpan-2.8 and netMHCStabpan1.0.  Links are provided below please accept user license and install on your system. 
+
+Two conda environment .yml's are distributed to create the python environment mhcflurry-env to run model. 
 If for any reason they don't work instructions for creating the environment are in the instructions.txt file
 
 ```
