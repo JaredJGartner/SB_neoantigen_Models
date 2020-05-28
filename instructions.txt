@@ -73,7 +73,7 @@
     gunzip nmer_Model.pickle.gz
 
     #Used text editor to change the paths to locations of IEDB Immunogenicity (beside to use .py3 file), and netmhcstabpan 
-    #Immunogenicity = '/Users/gartnerjj/Desktop/SB_neoantigen_Models/src/immunogenicity/predict_immunogenicity.py3'
+    #immuno_loc = '/Users/gartnerjj/Desktop/SB_neoantigen_Models/src/immunogenicity/predict_immunogenicity.py3'
     #netstab = '/Users/gartnerjj/Desktop/SB_neoantigen_Models/src/NetMHCStabpan1.0/netMHCstabpan-1.0/netMHCstabpan'
 
 ##Test neoantigen model
