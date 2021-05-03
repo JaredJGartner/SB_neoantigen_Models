@@ -37,7 +37,7 @@ gunzip mmp_Model.pickle.gz
 gunzip nmer_Model.pickle.gz
 ```
 
-## Alter paths in SB_neoantigen_Models/src/functions4models.py and use your favorite text editor.
+## Alter paths in SB_neoantigen_Models/src/prediction_modules.py and use your favorite text editor.
 
 ```
 Using your favorite text editor edit the paths to IEDB imuunogenicity, netmhcstabpan to their location on your system and save changes.
